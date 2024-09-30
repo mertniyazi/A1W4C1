@@ -1,8 +1,8 @@
 
 def rechtzaak():
-    keuze = input("druk iets om verder tegaan: ")
+    keuze_rechtzaak = input("druk iets om verder tegaan: ")
 
-    return keuze
+    return keuze_rechtzaak
 
 
 def gevangenis():
