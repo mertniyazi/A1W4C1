@@ -12,3 +12,6 @@ def kantine():
 
 def buiten():
     ...
+
+
+print("hallo")
