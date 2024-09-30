@@ -1,7 +1,7 @@
+
 def rechtzaak():
-    print("a")
     keuze = input("druk iets om verder tegaan: ")
-    print("m")
+
     return keuze
 
 
@@ -18,6 +18,9 @@ def buiten():
 
 
 while True:
+    print("uitleg")
+    input("click anything to continue")
+    print("begin situatie")
     if rechtzaak() == "accepteren":
         gevangenis()
         break
