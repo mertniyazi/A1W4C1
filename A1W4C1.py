@@ -6,7 +6,9 @@ def rechtzaak():
 
 
 def gevangenis():
-    print("b")
+    keuze_gevangenis = input("Voer een keuze in: ")
+    if keuze_gevangenis == "Drillboor":
+        print("Je valt in de politie bureau")
 
 
 def kantine():
@@ -30,6 +32,5 @@ while True:
         break
     elif recht == "liegen":
         print("Omdat je zat te liegen tijdens een serieuze rechtzaak wordt je veroordeeld voor maximaal levenseis en je kan er nooit meer eruit.")
-        break
     else:
         print("Voer een valide keuze in.")
