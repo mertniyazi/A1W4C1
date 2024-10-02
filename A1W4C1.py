@@ -125,13 +125,13 @@ def buiten():
     time.sleep(1)
     print("Je kijk ook naar de slaperige politie agent en denk van dat je de politie agent wel aankan pakken en zijn uniform stelen.")
     time.sleep(4)
-    keuze_rechtzaak = input('''Welke optie van de drie neem je?
+    keuze_buiten = input('''Welke optie van de drie neem je?
     - Verstoppen 
     - Klimmen
     - Uniform stelen
     Kies: ''').lower()
 
-    if keuze_rechtzaak == "verstoppen":
+    if keuze_buiten == "verstoppen":
         print("Je zit stiekem te kruipen en je bent onder de bus")
         time.sleep(2)
         print("Je wacht heel lang het voelt alsof het een eewigheid duurt")
@@ -143,13 +143,33 @@ def buiten():
         time.sleep(2)
         print("Je bent ontsnapt!")
         return True
-    elif keuze_rechtzaak == "klimmen":
+    elif keuze_buiten == "klimmen":
         print("Je besluit te onsnappen door middel van klimmen.")
         print("Je bent stiekem naar de hek aan het lopen.")
         time.sleep(1)
-        return True
-    elif keuze_rechtzaak == "liegen":
-        print("Omdat je loog tijdens een serieuze rechtszaak, word je veroordeeld tot levenslang en kom je nooit meer vrij.")
+        print("Je bent bij de hek.")
+        print("Je springt op het hek om te klimmen.")
+        time.sleep(1)
+        print("Wanneer je op de hek bent voel je een shrok.")
+        time.sleep(1)
+        print("Het was de hek")
+        print("Je kijkt naar links en er staat een gevaren teken van 10000 volt die had je niet gezien.")
+        print("je bent geëlektrocuteerd en door de hoge volt ben de dood gegaan door een hartstilstand.")
+        return False
+    elif keuze_buiten == "uniform stelen":
+        print("Je hebt besloten om de uniform te stelen van de slaperige agent.")
+        time.sleep(1)
+        print("Je rent op de agent en probeerd hem aantevallen")
+        print("Wat je niet wist was dat de agent altijd slaperig eruit ziet, maar hij is klaarwaker en hij hoort jou rennen")
+        time.sleep(1)
+        print("De agent draaid zich om en pakt zijn wapen.")
+        time.sleep(1)
+        print("BANG! BANG!")
+        print("De agent schiet twee kogels en heeft jou geraakt.")
+        print("De agent komt naar jou toe en zegt:")
+        time.sleep(1)
+        print("agent:'Wat een idioot'")
+        print("Je bent dood geschoten.")
         return False
     else:
         print("Voer een geldige keuze in.")
