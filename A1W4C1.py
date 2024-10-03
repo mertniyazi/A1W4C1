@@ -1,62 +1,32 @@
 import time
 
 
-def rechtzaak():
-    print("Rechter: 'U bent hier vandaag omdat u schuldig bent bevonden aan de moord op de 10-jarige Bram.'")
-    print("Kunt u deze actie rechtvaardigen?")
-    time.sleep(2)
-    print("Onder immense druk zitten je gedachten en zenuwen, waardoor je twijfelt tussen wegrennen of de straf accepteren... Misschien zou het liegen wel kunnen slagen?")
-    time.sleep(4)
-    keuze_rechtzaak = input('''Welke optie van de drie neem je?
-    - Accepteren
-    - Liegen
-    - Wegrennen
-    Kies: ''').lower()
-
-    if keuze_rechtzaak == "accepteren":
-        print("Je hebt jouw daad geaccepteerd en krijgt 20 jaar celstraf voor het vermoorden van de 10-jarige Bram.")
-        return True
-    elif keuze_rechtzaak == "wegrennen":
-        print("Je probeert weg te rennen als een idioot en wordt getackeld door een politieagent.")
-        return True
-    elif keuze_rechtzaak == "liegen":
-        print("Omdat je loog tijdens een serieuze rechtszaak, word je veroordeeld tot levenslang en kom je nooit meer vrij.")
-        return False
-    else:
-        print("Voer een geldige keuze in.")
-
-
-def gevangenis():
-    print("Nadat je werd veroordeeld ga je naar de gevangenis daar zie je cel waar je de komende 20 jaar zal moeten leven")
-    time.sleep(2)
-    print("Gevangenisbewaker: 'Zo we zijn er, dit is je nieuwe thuis geniet'")
-    time.sleep(2)
-    print("Je zit nu te bedenken van hoe je kan ontsnappen van jou cel")
-    print("Je zit nu te bedenken misschien is de deur wel open of misschien kan ik wachten op mijn eten want je kan niet goed nadenken met een legen maag")
-    print("of ik kan een drillboor paken naast de cel en mijn weg doorboren.")
-    time.sleep(4)
-    keuze_gevangenis = input('''Welke optie van de drie neem je?
-    - Cel openen
-    - Wachten
-    - Drillen
-    Kies: ''').lower()
-
-    if keuze_gevangenis == "cel openen":
-        print("de gevangenisbewaker had vergeten de deur op slot te zetten en je kan makkelijk weglopen naar de kantine.")
-        return True
-    elif keuze_gevangenis == "wachten":
-        print("Je wacht op jou eten en tijdens het eten vergeet je om te ontsnappen.")
-        return False
-    elif keuze_gevangenis == "drillen":
-        print("Je pakt de drillboor en begint te drillen je hebt een groot gat gemaakt om er doorheen te springen.")
-        time.sleep(2)
-        print("Terwijl je springt besef je dat onder jou een politie bureau en dat het te laat is om omhoog te staan")
-        print("er staan ook 6 bewakers die naast jou staan en ze zijn boos dat je hun koffie pauze hebt verstoord en ze slaan jou helemaal kapot.")
-        time.sleep(1)
-        print("je gaat terug in jou cel")
-        return False
-    else:
-        print("Voer een geldige keuze in.")
+def ascii_rechtzaak():
+    print('''
+          ```
+Kunt u deze actie rechtvaardigen?
+                      Hmmm...
+                        \          `,
+                                ___ #
+                                |/  ?
+            .......             | , )\
+                 /              /__/\ \____               #####
+                           ,-   /   \_/    \            _/_ ####
+          /\,_\          |/|   / < _____ _> \          [.[.]-=##
+          )   "\        -|.|--/___/  ,___/___\-         /_    )#
+          \ ___Y.   _____'-'______|\/______________     |__   #
+         __)/      [_______________________________]     \___/
+        /)  \       |                             |     .'\$/\`-.
+       /|| .|       |            _...._           |    ( `.Y.' ( )
+    __;_||__|_______|         ,-' ALT. '-_        |____|:__o___|_|_
+   [________________|        /   ASCII-   \       |________________]
+    |               |       |  _ _ART  ____.      |               |
+    |   Balif       |       | / / \| ||_)| |      |               |
+    |   RALF        |        \\_\_/|_|| \|/       |               |
+____|               |         -_        ,-        |               |____
+    |               |           `-...,-'          |               |
+    |               |                             |               |
+    |_______________|_____________________________|_______________|```\n''')
 
 
 def kantine():
@@ -114,62 +84,126 @@ def kantine():
 
 
 def buiten():
-    print("Je bent nu buiten, maar je bent nog niet helemaal vrij.")
-    print("Je kijkt om je heen en je ziet een politie bus, een hek en een slaperige politie agent.")
+    print("Je bent nu buiten, maar nog niet helemaal vrij.")
+    print("Om je heen zie je een politiebus, een hek, en een slaperige politieagent.")
     time.sleep(1)
-    print("Je zit nu te bedenken van hoe je het wilt doen")
-    print("Je ziet de politie bus we genoeg ruimte heeft om eronder te verstoppen")
+    print("Je denkt na over hoe je wilt ontsnappen.")
+    print("De politiebus heeft genoeg ruimte om je eronder te verstoppen.")
     time.sleep(1)
-    print("Je kijkt ook naar de hek")
-    print("Je ziet dat de hek best wel makkelijk is om erover heen te klimmen en ook best laag is.")
+    print("Het hek lijkt makkelijk over te klimmen, het is niet zo hoog.")
     time.sleep(1)
-    print("Je kijk ook naar de slaperige politie agent en denk van dat je de politie agent wel aankan pakken en zijn uniform stelen.")
+    print("De politieagent lijkt versuft. Je denkt eraan om hem te overmeesteren en zijn uniform te stelen.")
     time.sleep(4)
-    keuze_buiten = input('''Welke optie van de drie neem je?
-    - Verstoppen 
+
+    keuze_buiten = input('''Welke optie kies je?
+    - Verstoppen
     - Klimmen
     - Uniform stelen
     Kies: ''').lower()
 
     if keuze_buiten == "verstoppen":
-        print("Je zit stiekem te kruipen en je bent onder de bus")
+        print("Je kruipt stilletjes onder de bus.")
         time.sleep(2)
-        print("Je wacht heel lang het voelt alsof het een eewigheid duurt")
-        print("Je denkt om weer terug te gaan naar de voorkant van de gebouw")
+        print("Het wachten voelt als een eeuwigheid.")
+        print("Je denkt eraan terug te gaan naar het gebouw.")
         time.sleep(1)
-        print("Je hoort opeens een motor")
-        print("Het is de motor van de politie bus")
-        print("Je bent nu aan het bewegen.")
-        time.sleep(2)
-        print("Je bent ontsnapt!")
+        print("Opeens hoor je een motor starten.")
+        print("De bus begint te rijden. Je bent ontsnapt!")
         return True
+
     elif keuze_buiten == "klimmen":
-        print("Je besluit te onsnappen door middel van klimmen.")
-        print("Je bent stiekem naar de hek aan het lopen.")
+        print("Je besluit te ontsnappen door te klimmen.")
+        print("Stilletjes nader je het hek.")
         time.sleep(1)
-        print("Je bent bij de hek.")
-        print("Je springt op het hek om te klimmen.")
+        print("Je bent bij het hek en begint te klimmen.")
         time.sleep(1)
-        print("Wanneer je op de hek bent voel je een shrok.")
+        print("Plotseling voel je een schok.")
         time.sleep(1)
-        print("Het was de hek")
-        print("Je kijkt naar links en er staat een gevaren teken van 10000 volt die had je niet gezien.")
-        print("je bent geëlektrocuteerd en door de hoge volt ben de dood gegaan door een hartstilstand.")
+        print("Het hek staat onder stroom!")
+        print("Er hangt een bordje: '10000 volt'. Dat had je niet gezien.")
+        print("Je wordt geÃ«lektrocuteerd en sterft aan een hartstilstand.")
         return False
+
     elif keuze_buiten == "uniform stelen":
-        print("Je hebt besloten om de uniform te stelen van de slaperige agent.")
+        print("Je besluit het uniform van de agent te stelen.")
         time.sleep(1)
-        print("Je rent op de agent en probeerd hem aantevallen")
-        print("Wat je niet wist was dat de agent altijd slaperig eruit ziet, maar hij is klaarwaker en hij hoort jou rennen")
+        print("Je rent op de agent af en probeert hem te overmeesteren.")
+        print("Wat je niet wist, is dat hij wel alert is en je voetstappen hoort.")
         time.sleep(1)
-        print("De agent draaid zich om en pakt zijn wapen.")
+        print("De agent draait zich om en trekt zijn wapen.")
         time.sleep(1)
         print("BANG! BANG!")
-        print("De agent schiet twee kogels en heeft jou geraakt.")
-        print("De agent komt naar jou toe en zegt:")
+        print("Je wordt geraakt door twee kogels.")
         time.sleep(1)
-        print("agent:'Wat een idioot'")
-        print("Je bent dood geschoten.")
+        print("De agent komt naar je toe en zegt spottend:")
+        print("Agent: 'Wat een idioot.'")
+        print("Je bent doodgeschoten.")
+        return False
+
+    else:
+        print("Voer een geldige keuze in.")
+
+
+def gevangenis():
+    print("Na de rechtszaak beland je in een gevangenis en zie je daar je cel waar je de komende 20 jaar zult moeten leven in schuld.")
+    time.sleep(2)
+    print("Gevangenisbewaker: 'Zo we zijn er, dit is je nieuwe thuis geniet ervan.'")
+    time.sleep(5)
+    print("Je zit nu te bedenken van hoe je kan ontsnappen van jouw cel.")
+    print("Je denkt nu dat de deur misschien voor je open is gelaten of dat ik misschien op mijn eten kan wachten, want je lijkt niet goed te kunnen nadenken met een lege maag.")
+    print("Of kan ik misschien zelf ontsnappen met een boor?")
+    time.sleep(4)
+    keuze_rechtzaak = input('''Welke optie van de drie neem je?
+    - Cel openen
+    - Wachten
+    - Drillen
+    Kies: ''').lower()
+
+    if keuze_rechtzaak == "cel openen":
+        print("De gevangenisbewaker was vergeten de deur op slot te doen en je kunt gemakkelijk weglopen naar de kantine...")
+        return True
+    elif keuze_rechtzaak == "wachten":
+        print("Je hoort geklop op je deur, voordat je eten naar binnen wordt geschoven en je ervan eet.")
+        time.sleep(5)
+        print("Je bent dood gegaan door vergiftigd eten en begint opnieuw.")
+        time.sleep(5)
+        return False
+    elif keuze_rechtzaak == "drillen":
+        print("Je vindt een boor onder het bed van jouw celgenoot en begint te boren.")
+        time.sleep(4)
+        print("Terwijl je springt, realiseer je je dat je in de lunchruimte van de politie valt en dat het te laat is om je keuze terug te nemen.")
+        print("Er staan 6 bewakers die naast jou staan en ze zijn boos dat je hun koffie pauze hebt verstoord en ze slaan jou helemaal kapot.")
+        time.sleep(5)
+        print("Je gaat terug de cel in en begint opnieuw.")
+        time.sleep(5)
+        return False
+    else:
+        print("Voer een geldige keuze in.")
+
+
+def rechtzaak():
+    print("Rechter: 'U bent hier vandaag omdat u schuldig bent bevonden aan de moord op de 10-jarige Bram.'")
+    print("Kunt u deze actie rechtvaardigen?")
+    time.sleep(4)
+    print("Onder immense druk zitten je gedachten en zenuwen, waardoor je twijfelt tussen wegrennen of de straf accepteren... Misschien zou het liegen wel kunnen slagen?")
+    time.sleep(3)
+    ascii_rechtzaak()
+    time.sleep(2)
+    keuze_rechtzaak = input('''Welke optie van de drie neem je?
+    - Accepteren
+    - Liegen
+    - Wegrennen
+    Kies: ''').lower()
+
+    if keuze_rechtzaak == "accepteren":
+        print("Je hebt je daad geaccepteerd en krijgt 20 jaar gevangenisstraf voor het vermoorden van de 10-jarige Bram.")
+        return True
+    elif keuze_rechtzaak == "wegrennen":
+        print("Je probeert als een idioot weg te rennen en wordt getackeld door een politieagent!")
+        time.sleep(5)
+        return True
+    elif keuze_rechtzaak == "liegen":
+        print("Omdat je gelogen hebt tijdens een ernstig proces, word je veroordeeld tot levenslang en kom je nooit meer vrij.")
         return False
     else:
         print("Voer een geldige keuze in.")
@@ -189,17 +223,47 @@ print("Na een tijdje worden de stemmen steeds luider om je heen, voordat plotsel
 time.sleep(3)
 print("KLAK KLAK! 'Stilte in de zaal!' schreeuwt de rechter met de slaande hammer.")
 time.sleep(1)
-print("Je blijkt verwikkeld te zijn in een rechtszaak.")
+print("Je blijkt verwikkeld te zijn in een rechtszaak.\n")
+
+input("Druk op enter om verder te gaan.\n")
 
 while True:
-    recht = rechtzaak()
-    if recht == "accepteren":
-        gevangenis()
-        break
-    elif recht == "weg rennen":
-        gevangenis()
-        break
-    elif recht == "liegen":
-        print("Omdat je zat te liegen tijdens een serieuze rechtzaak wordt je veroordeeld voor maximaal levenseis en je kan er nooit meer eruit.")
+    if rechtzaak():
+        print('''
+Na een paar dagen ontwaak je in een cel van een gevangenis...
+Het enige licht schijnt van boven, afkomstig van een oude hanglamp die aan een draad bungelt, maar op het punt staat te vallen en kapot te gaan.''')
+        time.sleep(4)
+
+        print("Je staat langzaam op en kijkt om je heen, waardoor je langzaam tot jezelf komt en alles om je heen in je opneemt.")
+        print("Je voelt de drang om te huilen, maar bij het kijken in de spiegel zie je dat je ogen al vermoeid zijn van het huilen.")
+        time.sleep(4)
+
+        while True:
+            if gevangenis():
+                break
+            else:
+                time.sleep(5)
+                print("Je krijgt een nieuwe kans om je keuzes te heroverwegen.")
+                time.sleep(4)
+
+        while True:
+            if kantine():
+                break
+            else:
+                time.sleep(5)
+                print("Je krijgt een nieuwe kans om je keuzes te heroverwegen.")
+                time.sleep(4)
+
+        while True:
+            if buiten():
+                break
+            else:
+                time.sleep(5)
+                print("Je krijgt een nieuwe kans om je keuzes te heroverwegen.")
+                time.sleep(4)
     else:
-        print("Voer een valide keuze in.")
+        time.sleep(5)
+        print("Het blijkt dat je terug in de tijd gaat, een nieuwe kans om iets beters te kiezen.")
+        time.sleep(4)
+
+    break
