@@ -1,6 +1,77 @@
 import time
 
 
+def ascii_kantine():
+    print('''
+            ________________________
+ |                        |
+ |  [ FOOD  COUNTER ]      |  <-- Uitgiftebalie
+ |  ________________       |
+ | |    ________    |      |
+ | |   |        |   |      |
+ | |   |  FOOD  |   |      |  <-- Voedseluitgifte
+ | |___|________|___|      |
+ |                        |
+ |  [ Tables ] [ Chairs ]  |
+ |  [ ______ ] [______  ]  |
+ |  [______  ] [ ______ ]  |  <-- Tafels en stoelen
+ |  [ ______ ] [______  ]  |
+ |________________________|
+          ''')
+
+
+def ascii_gevangenis():
+    print('''
+          
+  ____________________
+ |                    |
+ |    ____________     |
+ |   |            |    |
+ |   |  ________  |    |   
+ |   | |        | |    |
+ |   | |________| |    |
+ |   |            |    |
+ |   | || || || || |   |   
+ |   | || || || || |   |
+ |   | || || || || |   |
+ |   |____________|    |
+ |____________________|
+          ''')
+
+
+def ascii_buiten():
+    print('''
+                  ___               _________
+       /   \_        .----'        '----.
+      /     o\_     /                    |
+     /_o_____o_\   /                      |
+    |          |  |     POLICE STATION     |
+    |__________|  |________________________|
+      ||    ||          ||          ||    
+      ||    ||          ||          ||   
+      ||----||          ||__________||   
+       |    |           |__________|   
+      [______]         ______||______  
+                      |             | 
+                     _|_ _         _|_
+                    | |_| |       | |_|
+            .-.     |_|_|_|_|      |_|_|    
+           ( o )   |_________|    |____|
+                  /__________\        
+                _| POLICE   |_
+   ____________/   BUS       |_______
+  |  ___ ___ ||   _________  || ___  |
+ [|_/.-.-.-.\_|| _|.-.-.-.-.|_||/.-.\_|]    
+   ( o ) ( o )     ( o ) ( o )   ( o )
+
+         (Zzz...)               |||||
+   (•_•)                *        |||||
+  < | Police Officer     *       |||||
+   / \       (~)         *       |||||
+==============================++++++++++++
+''')
+
+
 def ascii_rechtzaak():
     print('''
           ```
@@ -41,6 +112,8 @@ def kantine():
     time.sleep(1)
     print("Je zit nu te bedenken van hoe je het wilt doen ga ik eten of zou ik verder rennen.")
     time.sleep(4)
+    ascii_kantine()
+    time.sleep(2)
     keuze_kantine = input('''Welke optie van de drie neem je?
     - Devil fruit
     - Puree
@@ -93,7 +166,9 @@ def buiten():
     print("Het hek lijkt makkelijk over te klimmen, het is niet zo hoog.")
     time.sleep(1)
     print("De politieagent lijkt versuft. Je denkt eraan om hem te overmeesteren en zijn uniform te stelen.")
-    time.sleep(4)
+    time.sleep(5)
+    ascii_buiten()
+    time.sleep(2)
 
     keuze_buiten = input('''Welke optie kies je?
     - Verstoppen
@@ -121,7 +196,7 @@ def buiten():
         time.sleep(1)
         print("Het hek staat onder stroom!")
         print("Er hangt een bordje: '10000 volt'. Dat had je niet gezien.")
-        print("Je wordt geÃ«lektrocuteerd en sterft aan een hartstilstand.")
+        print("Je wordt geëlektrocuteerd en sterft aan een hartstilstand.")
         return False
 
     elif keuze_buiten == "uniform stelen":
@@ -153,6 +228,9 @@ def gevangenis():
     print("Je denkt nu dat de deur misschien voor je open is gelaten of dat ik misschien op mijn eten kan wachten, want je lijkt niet goed te kunnen nadenken met een lege maag.")
     print("Of kan ik misschien zelf ontsnappen met een boor?")
     time.sleep(4)
+    ascii_gevangenis
+    time.sleep(2)
+
     keuze_rechtzaak = input('''Welke optie van de drie neem je?
     - Cel openen
     - Wachten
@@ -209,6 +287,8 @@ def rechtzaak():
         print("Voer een geldige keuze in.")
 
 
+gamestart = True
+
 print('''
 Vanaf het begin bevindt de speler zich in een moeilijke situatie.
 Hij krijgt een aantal opties voorgeschoteld, waarvan sommige goed en sommige fout zijn.
@@ -227,7 +307,7 @@ print("Je blijkt verwikkeld te zijn in een rechtszaak.\n")
 
 input("Druk op enter om verder te gaan.\n")
 
-while True:
+while gamestart:
     if rechtzaak():
         print('''
 Na een paar dagen ontwaak je in een cel van een gevangenis...
@@ -261,9 +341,10 @@ Het enige licht schijnt van boven, afkomstig van een oude hanglamp die aan een d
                 time.sleep(5)
                 print("Je krijgt een nieuwe kans om je keuzes te heroverwegen.")
                 time.sleep(4)
+
+        gamestart = False
+
     else:
         time.sleep(5)
         print("Het blijkt dat je terug in de tijd gaat, een nieuwe kans om iets beters te kiezen.")
         time.sleep(4)
-
-    break
